@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "63a56df1-d556-4f66-b88d-bf7020bdb21e",
+		"name": "store",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22115688"
+	},
+	"item": [
+		{
+			"name": "my order ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 150,\n  \"petId\": 50,\n  \"quantity\": 1,\n  \"shipDate\": \"2022-09-04T16:58:43.828Z\",\n  \"status\": \"placed\",\n  \"complete\": false\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/store/order",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"store",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get store",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/store/order/:orderid",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"store",
+						"order",
+						":orderid"
+					],
+					"variable": [
+						{
+							"key": "orderid",
+							"value": "150"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/store/order/:orderid",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"store",
+						"order",
+						":orderid"
+					],
+					"variable": [
+						{
+							"key": "orderid",
+							"value": "150"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"value": "",
+			"type": "string",
+			"disabled": true
+		}
+	]
+}
